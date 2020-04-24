@@ -1,6 +1,12 @@
 Treason Coup
 ------------
 
+Original README below. This fork includes these changes on top of the original [treason](https://github.com/octachrome/treason):
+- [x] Card graphics
+
+![Cards Screenshot](https://user-images.githubusercontent.com/9534435/80168997-41a18a00-85b2-11ea-8248-07339c0302bf.png)
+
+
 A clone of the card game Coup written in Node.js. Play online at http://treason.thebrown.net.
 
 To run it, checkout the source code, install Node.js (version 6 or later), and run:
