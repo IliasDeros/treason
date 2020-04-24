@@ -575,9 +575,13 @@ function weCanChallenge() {
             return false;
         }
         // Only role-based actions can be challenged.
-        return !!action.roles;
+        if (!action.roles) {
+            return false
+        }
+
+        return true;
     } else if (vm.state.state.name() == states.BLOCK_RESPONSE) {
-        if (vm.state.state.target() === vm.state.playerIdx()) {
+        if (iAmTargeted()) {
             // Cannot challenge our own block.
             return false;
         }
@@ -585,6 +589,9 @@ function weCanChallenge() {
     } else {
         return false;
     }
+}
+function iAmTargeted() {
+    return vm.state.state.target() === vm.state.playerIdx()
 }
 function canTarget(playerIdx) {
     if (playerIdx == vm.state.playerIdx()) {
@@ -892,8 +899,21 @@ function notifyPlayerOfState() {
     else if (weAreInState(states.EXCHANGE)) {
         notifyPlayer('Choose the roles to keep');
     }
-    else if (weCanBlock() || weCanChallenge()) {
+    else if (weCanBlock()) {
         notifyPlayer(stateMessage());
+    }
+    else if (weCanChallenge()) {
+        var action = actions[vm.state.state.action()];
+
+        // Can challenge someone who blocked our action
+        if (vm.state.state.playerIdx() === vm.state.playerIdx()) {
+            return notifyPlayer(stateMessage());
+        }
+
+        // Skip challenging any actions/blocks between 2 other players
+        if (action.targeted && !iAmTargeted()) {
+            allow()
+        }
     }
     else if (weAreInState(states.EXCHANGE)) {
         notifyPlayer('Choose the roles to keep');
