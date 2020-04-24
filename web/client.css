@@ -243,3 +243,21 @@ h3 {
 .error {
     color: red;
 }
+.role-card {
+    display: inline-block;
+    height: 82px;
+}
+.role-card--revealed {
+    opacity: 0.4;
+}
+.role-reveal {
+    display: inline-block;
+    cursor: pointer;
+}
+.role-reveal:hover {
+    opacity: 0.6;
+}
+.select-influence {
+    display: flex;
+    justify-content: center;
+}

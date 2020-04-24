@@ -17,7 +17,7 @@
             </div>
             <div class="col-xs-6">
                 <!-- ko foreach: influence -->
-                    <span class="label" data-bind="text: role, css: labelClass(role(), revealed()), tooltip: { title: roleDescription(role()), trigger: 'hover', placement: 'right' }"></span><br/>
+                    <img class="role-card" data-bind="attr:{src: roleImagePath(role())}, css: roleImageClass(role(), revealed()), tooltip: { title: roleTooltip(role(), revealed()), trigger: 'hover', placement: 'right' }">
                 <!-- /ko -->
             </div>
         </div>

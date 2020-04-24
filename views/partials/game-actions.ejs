@@ -161,10 +161,12 @@
     </div>
     <div data-bind="visible: weMustReveal()">
         <span data-bind="text: stateMessage()"></span><br/><br/>
-        You must reveal an influence
-        <!-- ko foreach: ourInfluence() -->
-        <button class="btn" data-bind="text: role, css: buttonRoleClass(role()), visible: !revealed(), event: {vclick: reveal}"></button>
-        <!-- /ko -->
+        You must reveal an influence:
+        <div class="select-influence">
+            <!-- ko foreach: ourInfluence() -->
+            <img class="role-reveal" data-bind="attr:{src: roleImagePath(role())}, event: {vclick: reveal}"></button>
+            <!-- /ko -->
+        </div>
     </div>
     <div data-bind="visible: theyMustReveal()">
         <span data-bind="text: stateMessage()"></span><br/><br/>

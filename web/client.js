@@ -999,3 +999,40 @@ $('document').ready(function() {
         $('#newGameModal input').focus().select();
     });
 });
+
+function roleImagePath(roleName = "duke") {
+    return "/roles/" + roleName + ".png"
+}
+function roleImageClass(roleName, revealed) {
+    var className = "role-card--" + roleName
+
+    if (revealed) {
+        className += " role-card--revealed"
+    }
+
+    return className
+}
+function roleTooltip(role, revealed) {
+    if (revealed) {
+        return role + " - Revealed";
+    }
+    if (role === 'ambassador') {
+        return role + ' - Change cards';
+    }
+    if (role === 'inquisitor') {
+        return role + ' - Draw one from the deck and exchange OR look at one opponent\'s role and optionally force an exchange';
+    }
+    if (role === 'assassin') {
+        return role + ' - Pay $3 to reveal a player\'s influence';
+    }
+    if (role === 'captain') {
+        return role + ' - Steal $2';
+    }
+    if (role === 'contessa') {
+        return role + ' - Block assassination';
+    }
+    if (role === 'duke') {
+        return role + ' - Tax +$3';
+    }
+    return '';
+}
