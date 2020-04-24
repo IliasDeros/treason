@@ -1012,6 +1012,11 @@ function roleImageClass(roleName, revealed) {
 
     return className
 }
+function exchangeImageClass(index) {
+    if (vm.chosenExchangeOptions()[index]) {
+        return "role-keep--selected"
+    }
+}
 function roleTooltip(role, revealed) {
     if (revealed) {
         return role + " - Revealed";

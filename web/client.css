@@ -250,12 +250,18 @@ h3 {
 .role-card--revealed {
     opacity: 0.4;
 }
-.role-reveal {
+.role-keep {
+    opacity: 0.6;
+}
+.role-keep, .role-reveal {
     display: inline-block;
     cursor: pointer;
 }
 .role-reveal:hover {
     opacity: 0.6;
+}
+.role-keep--selected, .role-keep:hover {
+    opacity: 1;
 }
 .select-influence {
     display: flex;

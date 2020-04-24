@@ -60,10 +60,12 @@
     </div>
     <div data-bind="visible: weAreInState('exchange')">
         <i class="exchange"></i>
-        Choose <span data-bind="text: ourInfluenceCount()"></span> roles to keep:<br/>
-        <!-- ko foreach: state.state.exchangeOptions -->
-            <button class="btn" data-bind="text: $data, css: exchangeOptionClass($index()), event: {vclick: function() {toggleExchangeOption($index());}}"></button>
-        <!-- /ko -->
+        Choose <span data-bind="text: ourInfluenceCount()"></span> roles to keep:
+        <div class="select-influence">
+            <!-- ko foreach: state.state.exchangeOptions -->
+                <img class="role-keep" data-bind="attr:{src: roleImagePath($data)}, css: exchangeImageClass($index()), event: {vclick: function() {toggleExchangeOption($index());}}" />
+            <!-- /ko -->
+        </div>
         <br/>
         <button class="btn btn-action btn-ambassador" data-bind="enable: exchangeOptionsValid(), event: {vclick: exchange}">
             <i class="exchange"></i>
