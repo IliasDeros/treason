@@ -267,3 +267,61 @@ h3 {
     display: flex;
     justify-content: center;
 }
+.player-money {
+    position: absolute;
+    bottom: 4px;
+}
+.player-money__container {
+    position: relative;
+}
+.player-money__coin:before {
+    content:"\00A9";
+}
+.player-money__coin {
+    position: absolute;
+}
+.player-money__coin:first-child {
+    position: relative;
+}
+.player-money__coin:nth-child(2) {
+    left: 7px;
+}
+.player-money__coin:nth-child(3) {
+    left: 14px;
+}
+.player-money__coin:nth-child(4) {
+    left: 21px;
+}
+.player-money__coin:nth-child(5) {
+    left: 28px;
+}
+.player-money__coin:nth-child(6) {
+    left: 35px;
+}
+.player-money__coin:nth-child(7) {
+    left: 42px;
+}
+.player-money__coin:nth-child(8) {
+    left: 49px;
+}
+.player-money__coin:nth-child(9) {
+    left: 56px;
+}
+.player-money__coin:nth-child(10) {
+    left: 63px;
+}
+.player-money__coin:nth-child(11) {
+    left: 70px;
+}
+.player-money__coin:nth-child(12) {
+    left: 77px;
+}
+.player-money__coin:nth-child(13) {
+    left: 84px;
+}
+.player-influences {
+    display: flex;
+}
+.player-influences .role-card {
+    margin-right: 6px;
+}
