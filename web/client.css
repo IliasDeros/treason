@@ -246,6 +246,7 @@ h3 {
 .role-card {
     display: inline-block;
     height: 82px;
+    border-radius: 5px; /* Rounded corners */
 }
 .role-card--revealed {
     opacity: 0.4;
@@ -254,8 +255,11 @@ h3 {
     opacity: 0.6;
 }
 .role-keep, .role-reveal {
+    border-radius: 8px; /* Rounded corners */
     display: inline-block;
     cursor: pointer;
+    height: 210px;
+    margin: 4px;
 }
 .role-reveal:hover {
     opacity: 0.6;

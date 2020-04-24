@@ -1020,8 +1020,9 @@ $('document').ready(function() {
     });
 });
 
-function roleImagePath(roleName = "duke") {
-    return "/roles/" + roleName + ".png"
+function roleImagePath(roleName = "duke", size = '') {
+    var sizeSuffix = size && '-' + size
+    return "/roles/" + roleName + sizeSuffix + ".png"
 }
 function roleImageClass(roleName, revealed) {
     var className = "role-card--" + roleName
@@ -1045,7 +1046,7 @@ function roleTooltip(role, revealed) {
         return role + ' - Change cards';
     }
     if (role === 'inquisitor') {
-        return role + ' - Draw one from the deck and exchange OR look at one opponent\'s role and optionally force an exchange';
+        return role + ' - Change 1 card OR see one opponent\'s card';
     }
     if (role === 'assassin') {
         return role + ' - Pay $3 to reveal a player\'s influence';
@@ -1057,7 +1058,7 @@ function roleTooltip(role, revealed) {
         return role + ' - Block assassination';
     }
     if (role === 'duke') {
-        return role + ' - Tax +$3';
+        return role + ' - Draw $3';
     }
     return '';
 }
