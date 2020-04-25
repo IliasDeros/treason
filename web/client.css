@@ -330,3 +330,14 @@ h3 {
 .player-influences .role-card {
     margin-right: 6px;
 }
+.tooltip--card.in {
+    filter: none;
+    opacity: 1;
+}
+.tooltip--card .tooltip-inner {
+    background: transparent;
+}
+.role-tooltip {
+    border-radius: 20px;
+    max-width: 50vw;
+}

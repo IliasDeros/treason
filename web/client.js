@@ -1042,27 +1042,30 @@ function exchangeImageClass(index) {
         return "role-keep--selected"
     }
 }
+function tooltipTemplate() {
+    return '<div class="tooltip tooltip--card" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+}
 function roleTooltip(role, revealed) {
-    if (revealed) {
-        return role + " - Revealed";
+    if (!revealed && role !== 'unknown') {
+        return "<img class='role-tooltip' src='/roles/" + role + "-large.png' />"
     }
     if (role === 'ambassador') {
-        return role + ' - Change cards';
+        return 'Revealed ' + role + ' - Change cards';
     }
     if (role === 'inquisitor') {
-        return role + ' - Change 1 card OR see one opponent\'s card';
+        return 'Revealed ' + role + ' - Change 1 card OR see one opponent\'s card';
     }
     if (role === 'assassin') {
-        return role + ' - Pay $3 to reveal a player\'s influence';
+        return 'Revealed ' + role + ' - Pay $3 to reveal a player\'s influence';
     }
     if (role === 'captain') {
-        return role + ' - Steal $2';
+        return 'Revealed ' + role + ' - Steal $2';
     }
     if (role === 'contessa') {
-        return role + ' - Block assassination';
+        return 'Revealed ' + role + ' - Block assassination';
     }
     if (role === 'duke') {
-        return role + ' - Draw $3';
+        return 'Revealed ' + role + ' - Draw $3';
     }
     return '';
 }

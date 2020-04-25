@@ -28,7 +28,7 @@
                     <!-- ko ifnot: playerIsExchanging($index) -->
                         <!-- ko foreach: influence -->
                             <!-- ko ifnot: revealed -->
-                                <img class="role-card" data-bind="attr:{src: roleImagePath(role())}, css: roleImageClass(role(), revealed()), tooltip: { title: roleTooltip(role(), revealed()), trigger: 'hover', placement: 'right' }">
+                                <img class="role-card" data-bind="attr:{src: roleImagePath(role())}, css: roleImageClass(role(), revealed()), tooltip: { title: roleTooltip(role(), revealed()), trigger: 'hover', placement: 'right', html: true, template: tooltipTemplate() }">
                             <!-- /ko -->
                         <!-- /ko -->
                     <!-- /ko -->
