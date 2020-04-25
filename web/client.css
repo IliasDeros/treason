@@ -327,6 +327,18 @@ h3 {
     display: flex;
     align-items: center;
 }
+@media all and (max-width: 992px) {
+    .player-influences {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .role-card {
+        height: 48px;
+    }
+    .role-keep {
+        max-height: 18vmax;
+    }
+}
 .player-influences .role-card {
     margin-right: 6px;
 }
@@ -339,5 +351,5 @@ h3 {
 }
 .role-tooltip {
     border-radius: 20px;
-    max-width: 50vw;
+    max-width: 55vw;
 }
