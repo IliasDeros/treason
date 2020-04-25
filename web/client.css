@@ -325,6 +325,7 @@ h3 {
 }
 .player-influences {
     display: flex;
+    align-items: center;
 }
 .player-influences .role-card {
     margin-right: 6px;

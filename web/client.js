@@ -1019,7 +1019,11 @@ $('document').ready(function() {
         $('#newGameModal input').focus().select();
     });
 });
-
+function playerIsExchanging(getIndex) {
+    var playerIdx = getIndex();
+    var isExchanging = weAreInState(states.EXCHANGE) || theyAreInState(states.EXCHANGE);
+    return isExchanging && playerIdx === vm.state.state.playerIdx();
+}
 function roleImagePath(roleName = "duke", size = '') {
     var sizeSuffix = size && '-' + size
     return "/roles/" + roleName + sizeSuffix + ".png"
