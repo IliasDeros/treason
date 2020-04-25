@@ -327,19 +327,7 @@ h3 {
     display: flex;
     align-items: center;
 }
-@media all and (max-width: 992px) {
-    .player-influences {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    .role-card {
-        height: 48px;
-    }
-    .role-keep {
-        max-height: 18vmax;
-    }
-}
-.player-influences .role-card {
+.role-card {
     margin-right: 6px;
 }
 .tooltip--card.in {
@@ -352,4 +340,26 @@ h3 {
 .role-tooltip {
     border-radius: 20px;
     max-width: 55vw;
+}
+@media all and (max-width: 992px) {
+    .player-influences {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .role-card {
+        height: 48px;
+        margin-right: 0;
+    }
+    .role-keep {
+        max-height: 20vmin;
+        margin-right: 0;
+    }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.spin {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }

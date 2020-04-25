@@ -4,6 +4,7 @@ Treason Coup
 Original README below. This fork includes these changes on top of the original [treason](https://github.com/octachrome/treason):
 - [x] Card graphics
 - [x] Player coins visuals
+- [x] Show icon instead of cards when an exchange is active
 - [x] Skip challenging every action/block between 2 other players
 
 ![Cards Screenshot](https://user-images.githubusercontent.com/9534435/80168997-41a18a00-85b2-11ea-8248-07339c0302bf.png)
